@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="utf-8" />
 		<title>SuperShop Contact</title>
-		<link href="/css/style.css" rel="stylesheet" type="text/css" />
+		<link href="../css/style.css" rel="stylesheet" type="text/css" />
 		<meta name="description" content="" />
 		<meta name="author" content="Boco" />
 		<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css"/>
@@ -61,6 +61,6 @@
 			<?php form_close(); ?>
 		</section>
 		
-		<script type="text/javascript" src="/js/sendmail_offline_verification.js"></script>
+		<script type="text/javascript" src="../js/sendmail_offline_verification.js"></script>
 	</body>
 </html>

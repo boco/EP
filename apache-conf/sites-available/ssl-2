@@ -1,0 +1,70 @@
+
+<IfModule mod_ssl.c>
+<VirtualHost _default_:443>
+	ServerName 127.0.0.1
+	ServerAdmin webmaster@localhost
+#	Alias / /home/ep/EP/
+	DocumentRoot /home/ep/EP/
+#	Redirect permanent /index http://127.0.0.1
+	<Directory />
+		Options FollowSymLinks
+		AllowOverride None
+	</Directory>
+#	<Directory /home/ep/EP/adm/>
+#		Options FollowSymLinks
+#		AllowOverride None
+
+#		SSLVerifyClient require
+#		SSLVerifyDepth 2
+#		SSLOptions +ExportCertData
+
+#		Order allow,deny
+#		allow from all
+#	</Directory>
+	<Files adm>
+	    Options FollowSymLinks
+	    AllowOverride None
+
+	    SSLVerifyClient require
+	    SSLVerifyDepth 1
+	    SSLOptions +ExportCertData
+
+	    Order allow,deny
+	    allow from all
+	</Files>
+	<Files prodaja>
+	    Options FollowSymLinks
+            AllowOverride None
+
+            SSLVerifyClient require
+            SSLVerifyDepth 1
+            SSLOptions +ExportCertData
+
+            Order allow,deny
+            allow from all
+	</Files>
+	<Directory /home/ep/EP/>
+                Options FollowSymLinks
+                AllowOverride All
+        </Directory>
+
+	ErrorLog ${APACHE_LOG_DIR}/error.log
+	LogLevel warn
+	CustomLog ${APACHE_LOG_DIR}/ssl_access.log combined
+
+	SSLEngine 		on
+	SSLCertificateFile	/etc/apache2/ssl-2/webmaster@localhost-cert.pem
+	SSLCertificateKeyFile	/etc/apache2/ssl-2/webmaster@localhost-key.pem
+	SSLCACertificateFile	/etc/apache2/ssl-2/SuperShop-cacert.pem
+	SSLCARevocationFile	/etc/apache2/ssl-2/SuperShop-crl.pem
+
+	<FilesMatch "\.(cgi|shtml|phtml|php)$">
+		SSLOptions +StdEnvVars
+	</FilesMatch>
+
+	BrowserMatch "MSIE [2-6]" \
+		nokeepalive ssl-unclean-shutdown \
+		downgrade-1.0 force-response-1.0
+	BrowserMatch "MSIE [7-9]" ssl-unclean-shutdown
+</VirtualHost>
+</IfModule>

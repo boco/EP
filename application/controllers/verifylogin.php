@@ -27,6 +27,7 @@ class Verifylogin extends CI_Controller {
 			}
 		}
 		else{
+                        $this->form_validation->set_message('check_email', 'Invalid email!');
 			$this->load->view('login');
 		}
 	}

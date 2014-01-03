@@ -3,13 +3,13 @@
 	<head>
 		<meta charset="utf-8" />
 		<title>SuperShop Edit users</title>
-		<link href="/css/style.css" rel="stylesheet" type="text/css" />
+		<link href="../css/style.css" rel="stylesheet" type="text/css" />
 		<meta name="description" content="" />
 		<meta name="author" content="Boco" />
 		<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css"/>
 		<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
     	<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
-		<script type="text/javascript" src="/js/search.js"></script>
+		<script type="text/javascript" src="../js/search.js"></script>
 	</head>
 
 	<body>		
@@ -38,7 +38,7 @@
 			
 			<?php if($role <= 1){ ?>
 			<div id="search-bar">					
-				<img class="ikona" id="search" src="/photos/search.png" alt="search" width="24" height="24">
+				<img class="ikona" id="search" src="../photos/search.png" alt="search" width="24" height="24">
 				<input id="searchbar" class="oblika-search" name="searchbar" type="search" placeholder="Search">
 				<input id="hiddenurl" type="hidden" value="<?php echo base_url(); ?>">
 			</div>
@@ -83,14 +83,14 @@
 																	
 								echo '<td class="action">';
 								echo form_open("editsellers/edit");
-								echo '<input type="image" class="edit-user" title="Edit" src="/photos/edit.png" width="24" height="24"/>';
+								echo '<input type="image" class="edit-user" title="Edit" src="../photos/edit.png" width="24" height="24"/>';
 								echo '<input type="hidden" hidden" name="edit" value="'.$row->user_id.'" />';
 								echo form_close();
 								echo '</td>';
 				
 								echo '<td class="action">';
 								echo form_open("editsellers/delete");
-								echo '<input type="image" class="edit-user" title="Delete" src="/photos/bin.png" width="24" height="24"/>';
+								echo '<input type="image" class="edit-user" title="Delete" src="../photos/bin.png" width="24" height="24"/>';
 								echo '<input type="hidden" name="delete" value="'.$row->user_id.'" />';
 								echo form_close();
 								echo '</td>';
@@ -98,14 +98,14 @@
 								if($row->active == 1){
 									echo '<td class="action">';
 									echo form_open("editsellers/deactivate");
-									echo '<input type="image" class="edit-user" title="Deactivate" src="/photos/deactivate.png" width="24" height="24"/>';
+									echo '<input type="image" class="edit-user" title="Deactivate" src="../photos/deactivate.png" width="24" height="24"/>';
 									echo '<input type="hidden" name="deactivate" value="'.$row->user_id.'" />';
 									echo form_close();
 									echo '</td>';
 								}else{
 									echo '<td class="action">';
 									echo form_open("editsellers/activate");
-									echo '<input type="image" class="edit-user" title="Activate" src="/photos/activate.png" width="24" height="24"/>';
+									echo '<input type="image" class="edit-user" title="Activate" src="../photos/activate.png" width="24" height="24"/>';
 									echo '<input type="hidden" name="activate" value="'.$row->user_id.'" />';
 									echo form_close();
 									echo '</td>';
@@ -148,14 +148,14 @@
 																	
 								echo '<td class="action">';
 								echo form_open("editusers/edit");
-								echo '<input type="image" class="edit-user" title="Edit" src="/photos/edit.png" width="24" height="24"/>';
+								echo '<input type="image" class="edit-user" title="Edit" src="../photos/edit.png" width="24" height="24"/>';
 								echo '<input type="hidden" hidden" name="edit" value="'.$row->user_id.'" />';
 								echo form_close();
 								echo '</td>';
 				
 								echo '<td class="action">';
 								echo form_open("editusers/delete");
-								echo '<input type="image" class="edit-user" title="Delete" src="/photos/bin.png" width="24" height="24"/>';
+								echo '<input type="image" class="edit-user" title="Delete" src="../photos/bin.png" width="24" height="24"/>';
 								echo '<input type="hidden" name="delete" value="'.$row->user_id.'" />';
 								echo form_close();
 								echo '</td>';
@@ -163,14 +163,14 @@
 								if($row->active == 1){
 									echo '<td class="action">';
 									echo form_open("editusers/deactivate");
-									echo '<input type="image" class="edit-user" title="Deactivate" src="/photos/deactivate.png" width="24" height="24"/>';
+									echo '<input type="image" class="edit-user" title="Deactivate" src="../photos/deactivate.png" width="24" height="24"/>';
 									echo '<input type="hidden" name="deactivate" value="'.$row->user_id.'" />';
 									echo form_close();
 									echo '</td>';
 								}else{
 									echo '<td class="action">';
 									echo form_open("editusers/activate");
-									echo '<input type="image" class="edit-user" title="Activate" src="/photos/activate.png" width="24" height="24"/>';
+									echo '<input type="image" class="edit-user" title="Activate" src="../photos/activate.png" width="24" height="24"/>';
 									echo '<input type="hidden" name="activate" value="'.$row->user_id.'" />';
 									echo form_close();
 									echo '</td>';
