@@ -3,14 +3,14 @@
 	<head>
 		<meta charset="utf-8" />
 		<title>SuperShop My profile</title>
-		<link href="/css/style.css" rel="stylesheet" type="text/css" />
-		<link href="/photos/favicon2.ico" rel="icon" type="image/x-icon" />
+		<link href="../css/style.css" rel="stylesheet" type="text/css" />
+		<link href="../photos/favicon2.ico" rel="icon" type="image/x-icon" />
 		<meta name="description" content="" />
 		<meta name="author" content="Boco" />
 		<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css"/>
 		<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
     	<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
-		<script type="text/javascript" src="/js/search.js"></script>
+		<script type="text/javascript" src="../js/search.js"></script>
 	</head>
 
 	<body>		
@@ -39,7 +39,7 @@
 			
 			<?php if($role <= 1){ ?>
 			<div id="search-bar">					
-				<img class="ikona" id="search" src="/photos/search.png" alt="search" width="24" height="24">
+				<img class="ikona" id="search" src="../photos/search.png" alt="search" width="24" height="24">
 				<input id="searchbar" class="oblika-search" name="searchbar" type="search" placeholder="Search">
 				<input id="hiddenurl" type="hidden" value="<?php echo base_url(); ?>">
 			</div>
@@ -54,7 +54,7 @@
 		
 		<section id="myprofile">
 			<h2>My profile</h2>
-			<img src="/photos/profile.png" alt="profile" width="64" height="64">
+			<img src="../photos/profile.png" alt="profile" width="64" height="64">
 			<div class="profile">
 				<?php if($role == 0){ ?>
 					<p><strong>Name:</strong> <?php echo $name." ".$surname; ?></p>

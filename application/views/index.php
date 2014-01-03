@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="utf-8" />
 		<title>SuperShop</title>
-		<link href="/css/style.css" rel="stylesheet" type="text/css" />
+		<link href="../css/style.css" rel="stylesheet" type="text/css" />
 		<meta name="description" content="" />
 		<meta name="author" content="Boco" />
 		<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css"/>
@@ -19,6 +19,7 @@
 				<li><?php echo anchor('aboutus_offline', 'About us'); ?></li>
 				<li><?php echo anchor('contact_offline', 'Contact'); ?></li>
 			</ul>
+                        <?php echo anchor('signup', 'Sign up','class="login-offline"'); ?>
 			<?php echo anchor('login', 'Login', 'class="login-offline"'); ?>
 		</nav>
 
@@ -31,7 +32,7 @@
 			<br/>
 			<br/>
 			<br/>
-			<?php echo anchor('signup', 'Sign up','class="window-signup"'); ?>
+			
 		<section>
 	</body>
 </html>

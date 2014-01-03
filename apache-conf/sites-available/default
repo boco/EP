@@ -1,0 +1,38 @@
+<VirtualHost *:80>
+        ServerAdmin webmaster@localhost
+	ServerName 127.0.0.1
+	Alias /phpmyadmin/ "/var/www/phpmyadmin/"
+        DocumentRoot /home/ep/EP
+	Redirect /login https://127.0.0.1/login
+        <Directory />
+                Options FollowSymLinks
+                AllowOverride None
+        </Directory>
+        <Directory /home/ep/EP/>
+                Options FollowSymLinks
+                AllowOverride All
+        </Directory>
+	<Directory /var/www/phpmyadmin/>
+                Options Indexes FollowSymLinks MultiViews
+                AllowOverride None
+                Order deny,allow
+		deny from all
+                allow from 127.0.0.0/8 ::1/128
+        </Directory>
+
+	ScriptAlias /cgi-bin/ /usr/lib/cgi-bin/
+	<Directory "/usr/lib/cgi-bin">
+		AllowOverride None
+		Options +ExecCGI -MultiViews +SymLinksIfOwnerMatch
+		Order allow,deny
+		Allow from all
+	</Directory>
+
+	ErrorLog ${APACHE_LOG_DIR}/error.log
+
+	# Possible values include: debug, info, notice, warn, error, crit,
+	# alert, emerg.
+	LogLevel warn
+
+	CustomLog ${APACHE_LOG_DIR}/access.log combined
+</VirtualHost>

@@ -3,7 +3,7 @@ body {
   	font-size: 14px;
   	line-height: 20px;
   	color: #333333;
-  	background-image: url("/photos/binding_dark.png");
+  	background-image: url("../photos/binding_dark.png");
   	background-repeat: repeat;
   	height: 100%;
 }
@@ -185,6 +185,11 @@ h6 {
 	border: 1px solid rgba(0,0,0,0.3);
 	border-radius: 3px;
 	box-shadow: 1px 1px 1px #cccccc;
+        width: 100%;
+}
+
+.oklep > input {
+        width: 151px;
 }
 
 
@@ -227,8 +232,8 @@ nav {
 	left: 0%;
 	top: 0%;
 	height: 53px;
-	/*width: 100%;*/
-	width: 1366px;
+	width: 100%;
+	
 	padding-bottom: 20px;
 	box-shadow: 1px 1px 3px #888888;
 	z-index: 5;
@@ -373,7 +378,8 @@ nav ul ul ul {
 	text-align: center;
 	color: #ffffff;
 	position: relative;
-	left: 950px;
+        left: 1050px;
+	width: 236px;
 	background-color: #FF6600;
 	
 	/*background-image: -moz-linear-gradient(top,#FF9900,#FF6600);
@@ -1286,6 +1292,4 @@ td {
 .add-user:hover {
 	color: #fff;
   	background: #333333;
-}
-	
 }

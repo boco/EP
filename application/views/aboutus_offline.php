@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="utf-8" />
 		<title>SuperShop About us</title>
-		<link href="/css/style.css" rel="stylesheet" type="text/css" />
+		<link href="../css/style.css" rel="stylesheet" type="text/css" />
 		<meta name="description" content="" />
 		<meta name="author" content="Boco" />
 		<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css"/>

@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="utf-8" />
 		<title>SuperShop Prodaja</title>
-		<link href="/css/style.css" rel="stylesheet" type="text/css" />
+		<link href="../css/style.css" rel="stylesheet" type="text/css" />
 		<meta name="description" content="" />
 		<meta name="author" content="Boco" />	
 	</head>
